@@ -1,7 +1,7 @@
 # SMo-Gira-X1-Logic-Nodes
 Logic Nodes for the Gira X1
 
-### Poolsteuerung ###
+#Poolsteuerung
 Logikbaustein Poolsteuerung Gira X1
 
 Der Baustein ist für die Steuerung einer Umwelzpumpe und einem Umschaltventil für zb. Sonnenkollektoren gedacht, die über einen Bypass angeschlossen sind.
@@ -72,7 +72,8 @@ Dieser Wert gibt an wie lange zum umschalten des Ventils in den Heiz- oder Zirku
 Verwendetes Icon:
 Schwimmbad Icons erstellt von xnimrodx - Flaticon
 
-### Logikbaustein Divera Gira X1 ###
+# Divera Alarm
+# Logikbaustein Divera Gira X1
 
 Der Logikbaustein ruft über die API von Divera in Verbindung mit dem API Key aktuelle Einsatzdaten ab.
 Jedes mal wenn der Baustein am Eingang „Trigger“ eine 1 bekommt startet die Abfrage der Daten erneut.
