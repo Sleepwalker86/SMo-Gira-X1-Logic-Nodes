@@ -147,5 +147,6 @@ Folgende Ausgänge stehen zur Verfügung:
 - Message(Ausgabe von der empfangenen Nachricht, String)
 - Debug(Ausgabe von Fehlern, String)
 
+Wenn man zb. Temperaturwerte empfangen möchte kann man am Ausgang des Baustein ein Typ Converter anhängen um anschließen mit den Werten auch rechnen zu können.
 Dieser Baustein muss in der Simulation im GPA vorm beenden der Simulation am Eingang "Enable" mit einer 0 beendet werden.
 
