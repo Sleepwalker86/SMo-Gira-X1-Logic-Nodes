@@ -1,5 +1,37 @@
 Logic Nodes for the Gira X1
 
+# Logikbaustein MQTT Publish Gira X1
+
+Dieser Baustein sendet beim eintreffen am Eingang „Message“ einen String an einen MQTT Broker mit dem angegebenen Topic.
+
+Folgende Eingänge stehen zur Verfügung:
+- Message (String)
+
+Folgende Parameter stehen zur Verfügung:
+- Host (IP Adresse des Brokers, String)
+- Topic (String)
+
+Folgende Ausgänge stehen zur Verfügung:
+- Debug (Ausgabe von Fehlern und der gesendeten Nachricht, String)
+
+# Logikbaustein MQTT Subscribe Gira X1
+
+Dieser Baustein empfängt eine Nachricht von einen MQTT Server mit dem angegebenen Topic und leitet diese an den Ausgang  „Message“ weiter.(String)
+
+Folgende Eingänge stehen zur Verfügung:
+- Enable(Bool, Hier muss der Datenpunkt vom X1 "Bereit" angegeben werden)
+
+Folgende Parameter stehen zur Verfügung:
+- Host (IP Adresse des Brokers, String)
+- Topic (String)
+
+Folgende Ausgänge stehen zur Verfügung:
+- Message(Ausgabe von der empfangenen Nachricht, String)
+- Debug(Ausgabe von Fehlern, String)
+
+Wenn man zb. Temperaturwerte empfangen möchte kann man am Ausgang des Baustein ein Typ Converter anhängen um anschließen mit den Werten auch rechnen zu können.
+Dieser Baustein muss in der Simulation im GPA vorm beenden der Simulation am Eingang "Enable" mit einer 0 beendet werden.
+
 # Logikbaustein Poolsteuerung Gira X1
 
 Der Baustein ist für die Steuerung einer Umwelzpumpe und einem Umschaltventil für zb. Sonnenkollektoren gedacht, die über einen Bypass angeschlossen sind.
@@ -116,37 +148,3 @@ https://api.divera247.com/?urls.primaryName=api%2Fv1#/E
 
 Verwendetes Icon:
 https://www.flaticon.com/de/kostenlose-icons/alarm Alarm Icons erstellt von Freepik - Flaticon
-
-
-# Logikbaustein MQTT Publish Gira X1
-
-Dieser Baustein sendet beim eintreffen am Eingang „Message“ einen String an einen MQTT Broker mit dem angegebenen Topic.
-
-Folgende Eingänge stehen zur Verfügung:
-- Message (String)
-
-Folgende Parameter stehen zur Verfügung:
-- Host (IP Adresse des Brokers, String)
-- Topic (String)
-
-Folgende Ausgänge stehen zur Verfügung:
-- Debug (Ausgabe von Fehlern und der gesendeten Nachricht, String)
-
-# Logikbaustein MQTT Subscribe Gira X1
-
-Dieser Baustein empfängt eine Nachricht von einen MQTT Server mit dem angegebenen Topic und leitet diese an den Ausgang  „Message“ weiter.(String)
-
-Folgende Eingänge stehen zur Verfügung:
-- Enable(Bool, Hier muss der Datenpunkt vom X1 "Bereit" angegeben werden)
-
-Folgende Parameter stehen zur Verfügung:
-- Host (IP Adresse des Brokers, String)
-- Topic (String)
-
-Folgende Ausgänge stehen zur Verfügung:
-- Message(Ausgabe von der empfangenen Nachricht, String)
-- Debug(Ausgabe von Fehlern, String)
-
-Wenn man zb. Temperaturwerte empfangen möchte kann man am Ausgang des Baustein ein Typ Converter anhängen um anschließen mit den Werten auch rechnen zu können.
-Dieser Baustein muss in der Simulation im GPA vorm beenden der Simulation am Eingang "Enable" mit einer 0 beendet werden.
-
