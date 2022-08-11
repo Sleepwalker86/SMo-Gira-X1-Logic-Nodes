@@ -1,4 +1,3 @@
-# SMo-Gira-X1-Logic-Nodes
 Logic Nodes for the Gira X1
 
 # Logikbaustein Poolsteuerung Gira X1
@@ -43,7 +42,7 @@ Der Eingang „Wasserdruck Sensor“ kann dazu verwendet werden, einen Druckabfa
 Hier muss eine Vorgabetemperatur eintreffen oder fest in den Parametern definiert werden.
 Es wird somit versucht auf diese Temperatur zu heizen und beim Überschreiten der Temperatur wird nur noch Zirkuliert und nicht mehr geheizt.
 
-Vorlauftemperatur
+- Vorlauftemperatur
 Hier muss die Temperatur eintreffen die die aktuelle Poolwasser Temperatur darstellt. Es gilt als Vergleichswert zur Soll und Rücklauftemperatur. 
 
 - Rücklauftemperatur
