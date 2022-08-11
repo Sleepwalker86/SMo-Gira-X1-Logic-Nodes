@@ -33,39 +33,39 @@ Folgende Parameter stehen zur Verfügung:
 - Debug (Ausgabe aktueller Vorgang + Zeitstempel, String)
 - Freigabe 
 
-Der Eingang „Freigabe“ dient zum aktivieren des Bausteins.
+- Der Eingang „Freigabe“ dient zum aktivieren des Bausteins.
 Liegt am Eingang eine „1“ an startet der Baustein, trifft eine „0“ ein stoppt der Baustein.
 
-# Wasserdruck Sensor 
+- Wasserdruck Sensor 
 Der Eingang „Wasserdruck Sensor“ kann dazu verwendet werden, einen Druckabfall auszuwerten falls die Pumpe oberhalb des Wasserpegels steht. Fällt der Druck ab und es trifft am Eingang eine „0“ ein schaltet die Pumpe ab solange bis wieder eine „1“ eintrifft. (Default = true)
 
-# Solltemperatur
+- Solltemperatur
 Hier muss eine Vorgabetemperatur eintreffen oder fest in den Parametern definiert werden.
 Es wird somit versucht auf diese Temperatur zu heizen und beim Überschreiten der Temperatur wird nur noch Zirkuliert und nicht mehr geheizt.
 
-# Vorlauftemperatur
+Vorlauftemperatur
 Hier muss die Temperatur eintreffen die die aktuelle Poolwasser Temperatur darstellt. Es gilt als Vergleichswert zur Soll und Rücklauftemperatur. 
 
-# Rücklauftemperatur
+- Rücklauftemperatur
 Hier muss die Temperatur eintreffen die nach den Sonnenkollektoren gemessen wird. Dieser Wert wird verwendet um zu entscheiden ob das Ventil geöffnet oder geschlossen wird.
 
-# Filter
+- Filter
 Der Eingang Filter dient dazu zb. Bei schlechtem Wetter ein ständiges umschalten zu verhindern.
 Liegt an dem Eingang eine „1“ an wechselt der Baustein nicht in den Heizbetrieb, das Ventil bleibt dementsprechend auf „0“.
 
 Bei mir kommt der Wert von der PV Anlage, wenn länger eine gewisse Leistung unterschritten ist schalte ich um auf Zirkulieren. (Default = 0)
 
-# Temperaturdifferenz, Vor/Rücklauf
+- Temperaturdifferenz, Vor/Rücklauf
 Hier wird der Wert angegeben um wieviel Grad das Wasser wärmer sein soll das von den Kollektoren kommt als das was am Eingang Vorlauftemperatur anliegt. (Default = 0,3 °C)
 
-# Pufferzeit
+- Pufferzeit
 Dieser Wert gibt an wie lange gewartet werden soll in Minuten bis vom Zirkulieren wieder ins heizen umgeschaltet werden soll um erneut zu prüfen ob jetzt Sonne da ist und das Wasser wärmer vom Rücklauf zurück kommt als der Vorlauf. (Default = 60 Minuten)
 
-# Prüfzeit
+- Prüfzeit
 Dieser Wert gibt an wie lange gewartet werden soll, wenn geheizt wird, bis Vor und Rücklauf gegeneinander geprüft werden.
 (Default = 10 Minuten)
 
-# Wartezeit Ventilumschaltung / Sek.
+- Wartezeit Ventilumschaltung / Sek.
 Dieser Wert gibt an wie lange zum umschalten des Ventils in den Heiz- oder Zirkulierbetrieb die Pumpe ausgeschaltet werden soll damit nicht bei Last umgeschaltet wird. (Default = 15 Sekunden)
 
 Verwendetes Icon:
@@ -119,5 +119,34 @@ Verwendetes Icon:
 https://www.flaticon.com/de/kostenlose-icons/alarm Alarm Icons erstellt von Freepik - Flaticon
 
 
+# Logikbaustein MQTT Publish Gira X1
 
+Dieser Baustein sendet beim eintreffen am Eingang „Message“ einen String an einen MQTT Broker mit dem angegebenen Topic.
+
+Folgende Eingänge stehen zur Verfügung:
+- Message (String)
+
+Folgende Parameter stehen zur Verfügung:
+- Host (IP Adresse des Brokers, String)
+- Topic (String)
+
+Folgende Ausgänge stehen zur Verfügung:
+- Debug (Ausgabe von Fehlern und der gesendeten Nachricht, String)
+
+# Logikbaustein MQTT Subscribe Gira X1
+
+Dieser Baustein empfängt eine Nachricht von einen MQTT Server mit dem angegebenen Topic und leitet diese an den Ausgang  „Message“ weiter.(String)
+
+Folgende Eingänge stehen zur Verfügung:
+- Enable(Bool, Hier muss der Datenpunkt vom X1 "Bereit" angegeben werden)
+
+Folgende Parameter stehen zur Verfügung:
+- Host (IP Adresse des Brokers, String)
+- Topic (String)
+
+Folgende Ausgänge stehen zur Verfügung:
+- Message(Ausgabe von der empfangenen Nachricht, String)
+- Debug(Ausgabe von Fehlern, String)
+
+Dieser Baustein muss in der Simulation im GPA vorm beenden der Simulation am Eingang "Enable" mit einer 0 beendet werden.
 
