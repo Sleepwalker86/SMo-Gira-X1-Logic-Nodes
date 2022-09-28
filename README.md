@@ -1,18 +1,171 @@
 Logic Nodes for the Gira X1
 
-# Logikbaustein MQTT Publish Gira X1
+# Logikbaustein Pollenflug Gira X1
 
-Dieser Baustein sendet beim eintreffen am Eingang „Message“ einen String an einen MQTT Broker mit dem angegebenen Topic.
+Dieser Baustein fragt den Pollenflug-Gefahrenindex vom Deutschen Wetterdienst für drei Tage ab und gibt den Index an den entsprechenden Ausgang weiter.
+Zusätzlich gibt es für jedes Gewächs einen Ausgang der bei überschreiten der eingestellten Schwelle für diesen Tag ein „True“ ausgibt.
+
+Folgende Eingänge stehen zu Verfügung:
+- Trigger (Bool)
+
+Folgende Parameter stehen zu Verfügung:
+- Region (Integer)
+- Partregion (Integer)
+- Warnschwelle(Integer, 1=niedrig,2=mittel,3=hoch)
+
+Folgende Ausgänge stehen zu Verfügung:
+
+- Roggen übermorgen (String)
+- Roggen heute (String)
+- Roggen morgen (String)
+- Roggen Warnung (Bool)
+- Beifuss übermorgen (String)
+- Beifuss heute (String)
+- Beifuss morgen (String)
+- Beifuss Warnung (Bool)
+- Birke übermorgen (String)
+- Birke heute (String)
+- Birke morgen (String)
+- Birke Warnung (Bool)
+- Graeser übermorgen (String)
+- Graeser heute (String)
+- Graeser morgen (String)
+- Graeser Warnung (Bool)
+- Esche übermorgen (String)
+- Esche heute (String)
+- Esche morgen (String)
+- Esche Warnung (Bool)
+- Hasel übermorgen (String)
+- Hasel heute (String)
+- Hasel morgen (String)
+- Hasel Warnung (Bool)
+- Erle übermorgen (String)
+- Erle heute (String)
+- Erle morgen (String)
+- Erle Warnung (Bool)
+- Ambrosia übermorgen (String)
+- Ambrosia heute (String)
+- Ambrosia morgen (String)
+- Ambrosia Warnung (Bool)
+- Region Name (String)
+- Debug (String)
+
+https://www.flaticon.com/de/kostenlose-icons/pollen Pollen Icons erstellt von Freepik - Flaticon
+
+
+
+DWD Dokumentation: https://opendata.dwd.de/climate_environment/health/alerts/Beschreibung_pollen_s31fg.pdf
+
+# Logikbaustein Tankerkoenig Gira X1
+
+Dieser Baustein fragt aktuelle Spritpreise von Tankerkoenig.de ab.
 
 Folgende Eingänge stehen zur Verfügung:
-- Message (String)
+- Trigger (Bool)
 
 Folgende Parameter stehen zur Verfügung:
-- Host (IP Adresse des Brokers, String)
-- Topic (String)
+- API Key (String)
+- geographische Breite des Standortes
+- geographische Länge
+- Suchradius in km
+- Spritsorte(e5, e10,diesel, all)
+- Sortierung(price, dist)
 
 Folgende Ausgänge stehen zur Verfügung:
-- Debug (Ausgabe von Fehlern und der gesendeten Nachricht, String)
+- Json (String)
+- Name (String)
+- Straße (String)
+- Distanz (Double)
+- Diesel (Double)
+- E5 (Double)
+- E10 (Double)
+- Offen (Bool)
+- Hausnummer (String)
+- PLZ (Integer)
+- Preis (Double, Dieser Ausgang wird nur beschrieben wenn nach einer Spritsorte gefiltert wird)
+
+API https://creativecommons.tankerkoenig.de/
+
+Verwendetes Icon :<a href="https://www.flaticon.com/free-icons/gas-station" title="gas station icons">Gas station icons created by DinosoftLabs - Flaticon</a>
+
+# Logikbaustein PiHole Gira X1
+
+Dieser Baustein fragt die PiHole Status API in eurem Netzwerk ab.
+
+Trifft eine „1“ am Eingang „Trigger“ ein wird die API abgefragt und an die Ausgänge weitergeleitet.
+
+Folgende Eingänge stehen zur Verfügung:
+- Trigger (Bool)
+
+Folgende Parameter stehen zur Verfügung:
+- Host (String)
+
+Folgende Ausgänge stehen zur Verfügung:
+- domains_being_blocked (Integer)
+- dns_queries_today (Integer)
+- ads_blocked_today (Double)
+- public double ads_percentage_today (Integer)
+- unique_domains (Integer)
+- queries_forwarded (Integer)
+- queries_cached (Integer)
+- clients_ever_seen (Integer)
+- unique_clients (Integer)
+- dns_queries_all_types (Integer)
+- reply_UNKNOWN (Integer)
+- reply_NODATA (Integer)
+- reply_NXDOMAIN (Integer)
+- reply_CNAME (Integer)
+- reply_IP (Integer)
+- reply_DOMAIN (Integer)
+- reply_RRNAME (Integer)
+- reply_SERVFAIL (Integer)
+- reply_REFUSED (Integer)
+- reply_NOTIMP (Integer)
+- reply_OTHER (Integer)
+- reply_DNSSEC (Integer)
+- reply_NONE (Integer)
+- reply_BLOB (Integer)
+- dns_queries_all_replies (Integer)
+- privacy_level (Integer)
+- file_exists (Bool)
+- status (String) 
+- absolute (Integer)
+- days (Integer)
+- hours (Integer)
+- minutes (Integer)
+- Aktive (Bool, 1= Status enabled 0= Status disabled)
+
+API PiHole https://discourse.pi-hole.net/t/pi-hole-api/1863
+
+Verwendetes Icon https://www.flaticon.com/free-icons/hand Hand icons created by Freepik - Flaticon
+
+# Logikbaustein Auswerten	Gira X1
+
+Dieser Baustein wertet am Eingang „Wert“ eintreffende Zahlen aus und gibt folgende Ergebnisse am Ausgang „Ergebnis“ zurück.
+Am Parameter „Modus“ muss ein unten aufgelisteter Modus gewählt werden.
+Der Parameter begrenzt die maximalen Werte zur Berechnung am Eingang „Wert“.
+Der Eingang	„Reset“ dient dazu die Warteliste zu löschen und den Baustein erneut zu starten.
+
+Modus:
+- Min -> Minimum
+- Max -> Maximum
+- AVG -> Durchschnitt
+- First -> Erster eingetroffener Wert
+- Last -> letzter eingetroffener Wert
+
+Folgende Eingänge stehen zu Verfügung:
+- Wert (Double)
+- Reset (Bool)
+
+Folgende Parameter stehen zu Verfügung:
+- Modus (String)
+- Anzahl Werte (Integer)
+
+Folgende Ausgänge stehen zu Verfügung:
+- Ergebnis (Double)
+- Debug (String)
+
+Verwendetes Icon : <a href="https://www.flaticon.com/de/kostenlose-icons/mathe" title="mathe Icons">Mathe Icons erstellt von Freepik - Flaticon</a>
 
 # Logikbaustein MQTT Subscribe Gira X1
 
