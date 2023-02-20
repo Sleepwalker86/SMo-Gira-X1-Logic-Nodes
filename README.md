@@ -22,7 +22,7 @@ Folgende Ausgänge stehen zu Verfügung:
 - Beifuss übermorgen (String)
 - Beifuss heute (String)
 - Beifuss morgen (String)
-- Beifuss Warnung (Bool)
+- Beifuss Warnung (Bool) 
 - Birke übermorgen (String)
 - Birke heute (String)
 - Birke morgen (String)
