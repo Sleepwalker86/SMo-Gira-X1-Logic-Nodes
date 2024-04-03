@@ -84,6 +84,9 @@ Folgende Ausgänge stehen zur Verfügung:
 - PLZ (Integer)
 - Preis (Double, Dieser Ausgang wird nur beschrieben wenn nach einer Spritsorte gefiltert wird)
 
+## Changelog
+V 1.0.8 Behebt den Fehler das wenn eine Tankstelle nicht für alle Kraftstoffe einen Preis zurück gibt der Download fehl schlägt.
+
 API https://creativecommons.tankerkoenig.de/
 
 Verwendetes Icon :<a href="https://www.flaticon.com/free-icons/gas-station" title="gas station icons">Gas station icons created by DinosoftLabs - Flaticon</a>
