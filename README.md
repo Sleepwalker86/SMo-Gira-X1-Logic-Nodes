@@ -119,6 +119,12 @@ Ausgänge
     * Dieser Ausgang gibt den aktuellen Betriebszustand des Systems als Text aus, z.B. "Bereit", "extern scharf", "Einbruchalarm extern" usw.
 6. Debug (String)
     * Dieser Ausgang gibt eine detaillierte Diagnose des Systems aus, wie z.B. den Status der Sensoren, ob die externe oder interne Scharfschaltung aktiv ist, und ob der Alarmzustand aktiviert ist.
+  
+# Changelog
+
+	Version 1.0.1:
+	- Wenn die Verzögerung aktiv ist und ein Sensor nicht geschlossen ist kommt ein Fehler. Vorher wurde trotzdem scharf geschaltet.
+
 
 # Logikbaustein Pollenflug Gira X1
 
