@@ -5,52 +5,52 @@ Logic Nodes for the Gira X1
 Diese Anleitung erklärt dir, wie du das Alarmsystem mit den verschiedenen Scharfschaltmodi (extern und intern), den Alarmzuständen und den Rücksetzungen bedienen kannst.
 1. Modi des Alarmsystems
 Du kannst das System in zwei Modi scharf schalten:
-    * Extern scharf: Sichert alle Türen, Fenster und Bewegungsmelder.
-    * Intern scharf: Sichert Türen und Fenster, jedoch ohne Bewegungsmelder.
+* Extern scharf: Sichert alle Türen, Fenster und Bewegungsmelder.
+* Intern scharf: Sichert Türen und Fenster, jedoch ohne Bewegungsmelder.
 2. Extern Scharfschalten
 Voraussetzungen:
-    * Alle externen Sensoren (Türen, Fenster, Bewegungsmelder) müssen geschlossen sein.
-    * Der Alarmzustand muss inaktiv sein.
-    * Du musst die externe Scharfschaltung anfordern.
+* Alle externen Sensoren (Türen, Fenster, Bewegungsmelder) müssen geschlossen sein.
+* Der Alarmzustand muss inaktiv sein.
+* Du musst die externe Scharfschaltung anfordern.
 Ablauf:
-    * Das System startet einen Countdown, der durch den Parameter "verz. Extern Scharf (Sek.)" bestimmt wird.
-    * Nach Ablauf des Countdowns wird der Status auf "extern scharf" gesetzt.
-    * Wird während des Countdowns ein Sensor geöffnet, wird der Scharfschaltvorgang abgebrochen.
+* Das System startet einen Countdown, der durch den Parameter "verz. Extern Scharf (Sek.)" bestimmt wird.
+* Nach Ablauf des Countdowns wird der Status auf "extern scharf" gesetzt.
+* Wird während des Countdowns ein Sensor geöffnet, wird der Scharfschaltvorgang abgebrochen.
 Deaktivierung:
-    * Wenn du die externe Scharfschaltung zurücksetzt, wird der Status auf "Bereit" gesetzt und der Scharfschaltvorgang gestoppt.
+* Wenn du die externe Scharfschaltung zurücksetzt, wird der Status auf "Bereit" gesetzt und der Scharfschaltvorgang gestoppt.
 3. Intern Scharfschalten
 Voraussetzungen:
-    * Alle Türen und Fenster müssen geschlossen sein.
-    * Der Alarmzustand muss inaktiv sein.
-    * Du musst die interne Scharfschaltung anfordern.
+* Alle Türen und Fenster müssen geschlossen sein.
+* Der Alarmzustand muss inaktiv sein.
+* Du musst die interne Scharfschaltung anfordern.
 Ablauf:
-    * Das System startet einen Countdown, der durch den Parameter "verz. Intern Scharf (Sek.)" bestimmt wird.
-    * Nach Ablauf des Countdowns wird der Status auf "intern scharf" gesetzt.
+* Das System startet einen Countdown, der durch den Parameter "verz. Intern Scharf (Sek.)" bestimmt wird.
+* Nach Ablauf des Countdowns wird der Status auf "intern scharf" gesetzt.
 Deaktivierung:
-    * Wenn du die interne Scharfschaltung zurücksetzt, wird der Status auf "Bereit" gesetzt.
+* Wenn du die interne Scharfschaltung zurücksetzt, wird der Status auf "Bereit" gesetzt.
 4. Anlage in Bereitschaft setzen
 Wenn weder die interne noch die externe Scharfschaltung aktiv ist und alle Sensoren korrekt geschlossen sind, setzt das System den Status auf "Bereit".
 5. Alarm auslösen
 Externer Alarm:
-    * Der externe Alarm wird ausgelöst, wenn das System extern scharf ist und ein Sensor (Türen, Fenster oder Bewegungsmelder) geöffnet wird.
-    * Die Sirene und das Blitzlicht werden aktiviert, und der Status wechselt auf "Einbruchalarm extern".
+* Der externe Alarm wird ausgelöst, wenn das System extern scharf ist und ein Sensor (Türen, Fenster oder Bewegungsmelder) geöffnet wird.
+* Die Sirene und das Blitzlicht werden aktiviert, und der Status wechselt auf "Einbruchalarm extern".
 Interner Alarm:
-    * Der interne Alarm wird ausgelöst, wenn das System intern scharf ist und ein Sensor (Türen oder Fenster) geöffnet wird.
-    * Auch hier werden Sirene und Blitzlicht aktiviert, und der Status ändert sich auf "Einbruchalarm intern".
+* Der interne Alarm wird ausgelöst, wenn das System intern scharf ist und ein Sensor (Türen oder Fenster) geöffnet wird.
+* Auch hier werden Sirene und Blitzlicht aktiviert, und der Status ändert sich auf "Einbruchalarm intern".
 6. System zurücksetzen
 Voraussetzungen:
-    * Der Reset-Button muss gedrückt werden.
-    * Der Alarmzustand muss aktiv sein.
-    * Es darf keine externe oder interne Scharfschaltung aktiv sein.
+* Der Reset-Button muss gedrückt werden.
+* Der Alarmzustand muss aktiv sein.
+* Es darf keine externe oder interne Scharfschaltung aktiv sein.
 Ablauf:
-    * Durch das Drücken des Reset-Buttons deaktivierst du den Alarmzustand, setzt Sirene und Blitzlicht zurück und versetzt das System in den "Bereit"-Modus.
+* Durch das Drücken des Reset-Buttons deaktivierst du den Alarmzustand, setzt Sirene und Blitzlicht zurück und versetzt das System in den "Bereit"-Modus.
 7. Fehlerdiagnose
 Das System zeigt dir kontinuierlich den Zustand der externen und internen Scharfschaltung sowie den Status der Sensoren an. So kannst du den aktuellen Systemzustand immer überwachen.
 8. Wichtige Parameter
-    * verz. Extern Scharf (Sek.): Verzögerung vor der Aktivierung des externen Scharfschaltens in Sekunden.
-    * verz. Intern Scharf (Sek.): Verzögerung vor der Aktivierung des internen Scharfschaltens in Sekunden.
-    * verz. Extern Alarm (Sek.): Verzögerung vor der Auslösung des externen Alarms in Sekunden.
-    * verz. Intern Alarm (Sek.): Verzögerung vor der Auslösung des internen Alarms in Sekunden.
+* verz. Extern Scharf (Sek.): Verzögerung vor der Aktivierung des externen Scharfschaltens in Sekunden.
+* verz. Intern Scharf (Sek.): Verzögerung vor der Aktivierung des internen Scharfschaltens in Sekunden.
+* verz. Extern Alarm (Sek.): Verzögerung vor der Auslösung des externen Alarms in Sekunden.
+* verz. Intern Alarm (Sek.): Verzögerung vor der Auslösung des internen Alarms in Sekunden.
 9. Hinweise
 * Achte darauf, dass alle Sensoren geschlossen sind, bevor du das System scharf schaltest.
 * Im Alarmzustand musst du das System mit dem Reset-Button zurücksetzen, um die Alarmvorrichtungen zu deaktivieren.
@@ -89,9 +89,11 @@ Parameter
 2. Verz. Intern Scharf (Sek.) (Integer)
     * Dieser Parameter legt die Verzögerung in Sekunden fest, bevor die interne Scharfschaltung aktiviert wird. Nach der Anforderung zur internen Scharfschaltung wartet das System diese Zeitspanne, bevor es den Status auf "intern scharf" setzt.
 3. Verz. Extern Alarm (Sek.) (Integer)
-    * Dieser Parameter gibt an, wie lange das System warten soll, bevor der externe Alarm ausgelöst wird, nachdem ein externer Sensor eine Störung (geöffnete Tür, Fenster oder Bewegung) meldet.
+    * Dieser Parameter gibt an, wie lange das System warten soll, bevor der externe Alarm ausgelöst wird, nachdem ein Tür Sensor eine Störung (geöffnete Tür) meldet.
+    * WICHTIG: Die Alarm Verzögerung wirkt sich nur auf die Tür Eingänge aus. Alle anderen Sensoren führen sofort zu einem Alarm!
 4. Verz. Intern Alarm (Sek.) (Integer)
-    * Hier wird die Verzögerung in Sekunden eingestellt, bevor der interne Alarm ausgelöst wird, nachdem ein interner Sensor (Tür oder Fenster) eine Störung meldet.
+    * Hier wird die Verzögerung in Sekunden eingestellt, bevor der interne Alarm ausgelöst wird, nachdem ein Tür Sensor eine Störung (geöffnete Tür) meldet.
+    * WICHTIG: Die Alarm Verzögerung wirkt sich nur auf die Tür Eingänge aus. Alle anderen Sensoren führen sofort zu einem Alarm!
 5. Sensoren NC = 1 / NO = 0 (Bool)
     * Dieser Parameter bestimmt, ob die Sensoren als Normal geschlossen (NC) oder Normal offen (NO) konfiguriert sind.
     * True (1): Sensoren arbeiten im Normal-geschlossen-Modus (NC).
