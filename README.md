@@ -83,6 +83,9 @@ Eingänge
     * Diese Eingänge überwachen die Bewegungsmelder. Wenn der Eingang eines Bewegungsmelders auf True gesetzt ist, zeigt dies, dass keine Bewegung detektiert wird.
     * True: Keine Bewegung erkannt.
     * False: Bewegung erkannt.
+7. Technik 1 (Bool)
+   * Dieser Eingang löst unabhängig von intern und extern Scharf aus.
+     
 Parameter
 1. Verz. Extern Scharf (Sek.) (Integer)
     * Dieser Parameter bestimmt die Verzögerung in Sekunden, bevor die externe Scharfschaltung aktiviert wird. Nach der Anforderung zur externen Scharfschaltung wartet das System diese Zeitspanne ab, bevor es den Status auf "extern scharf" setzt.
@@ -122,6 +125,10 @@ Ausgänge
   
 # Changelog
 
+	Version 1.1.0:
+	- Anzahl für die Fensterkontakte von 10 auf 20 erhöht.
+ 	- Technik Alarm Eingang hinzugefügt.
+ 
 	Version 1.0.1:
 	- Wenn die Verzögerung aktiv ist und ein Sensor nicht geschlossen ist kommt ein Fehler. Vorher wurde trotzdem scharf geschaltet.
 
