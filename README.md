@@ -1,3 +1,7 @@
+#Da ich alle meine Bausteine kostenlos zur Verfügung stelle und ich das auch gerne beibehalten möchte, würde ich mich über eine kleine Paypal Spende freuen. Vielen Dank für deine Unterstützung.
+#[Spende eine kleine Aufwandsentschädigung ->]([https://www.genome.gov/](https://www.paypal.com/donate/?hosted_button_id=SHU2PHYACRRMN))
+
+
 Logic Nodes for the Gira X1
 
 # Logikbaustein Alarmanlage
