@@ -20,8 +20,7 @@ Voraussetzungen:
 * Du musst die externe Scharfschaltung anfordern.
 Ablauf:
 * Das System startet einen Countdown, der durch den Parameter "verz. Extern Scharf (Sek.)" bestimmt wird.
-* Nach Ablauf des Countdowns wird der Status auf "extern scharf" gesetzt.
-* Wird während des Countdowns ein Sensor geöffnet, wird der Scharfschaltvorgang abgebrochen.
+* Nach Ablauf des Countdowns wird der Status auf "extern scharf" gesetzt, bis dahin kannst du das Gebäude verlassen da das öffnen einer Tür zu diesem Zeitpunkt noch nicht ausgewertet wird.
 Deaktivierung:
 * Wenn du die externe Scharfschaltung zurücksetzt, wird der Status auf "Bereit" gesetzt und der Scharfschaltvorgang gestoppt.
 3. Intern Scharfschalten
