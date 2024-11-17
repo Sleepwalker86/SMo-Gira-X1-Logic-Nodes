@@ -59,6 +59,8 @@ Das System zeigt dir kontinuierlich den Zustand der externen und internen Scharf
 9. Hinweise
 * Achte darauf, dass alle Sensoren geschlossen sind, bevor du das System scharf schaltest.
 * Im Alarmzustand musst du das System mit dem Reset-Button zurücksetzen, um die Alarmvorrichtungen zu deaktivieren.
+* WICHTIG: Du musst die Eingänge die du verwendest als Initialwert von „1“ auf „0“ ändern damit die wenn noch kein Telegram eingetroffen ist der Eingang nicht pauschal auf true steht.
+
 
 
 Beschreibung der Ein- und Ausgänge sowie Parameter des Alarmsystems
@@ -106,6 +108,9 @@ Parameter
     * Dieser Parameter bestimmt, ob die Sensoren als Normal geschlossen (NC) oder Normal offen (NO) konfiguriert sind.
     * True (1): Sensoren arbeiten im Normal-geschlossen-Modus (NC).
     * False (0): Sensoren arbeiten im Normal-offen-Modus (NO).
+6. Sirene Timer (Sek.) (Integer)
+    * Hier wird die Verzögerung in Sekunden eingestellt, bis die Sirene nach einem Alarm deaktiviert wird. Jede neue Melder Änderung aktiviert die Sirene und den Timer erneut.
+      
 Ausgänge
 1. Sirene (Bool)
     * Dieser Ausgang wird aktiviert, wenn ein Alarm ausgelöst wird. Wenn auf True gesetzt, wird die Sirene aktiviert.
@@ -129,6 +134,9 @@ Ausgänge
     * Dieser Ausgang gibt eine detaillierte Diagnose des Systems aus, wie z.B. den Status der Sensoren, ob die externe oder interne Scharfschaltung aktiv ist, und ob der Alarmzustand aktiviert ist.
   
 # Changelog
+
+	Version 1.2:
+	- Ausschalt Timer für die Sirene hinzugefügt. Wenn die Zeit verstrichen ist schaltet die Sirene aus
 
 	Version 1.1.0:
 	- Anzahl für die Fensterkontakte von 10 auf 20 erhöht.
