@@ -137,6 +137,7 @@ Ausgänge
 
 	Version 1.2:
 	- Ausschalt Timer für die Sirene hinzugefügt. Wenn die Zeit verstrichen ist schaltet die Sirene aus
+ 	- Jede neue Alarmauslösung triggert die Alarmausgänge erneut(Sirene/Blitzleuchte)
 
 	Version 1.1.0:
 	- Anzahl für die Fensterkontakte von 10 auf 20 erhöht.
