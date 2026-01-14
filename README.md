@@ -135,6 +135,16 @@ Ausgänge
   
 # Changelog
 
+	Version 1.4.0:
+	- Fehler behoben das wenn die Verzögerungszeit beim Extern Scharfschalten aktiv ist und dann zb. Zyklisch ein Melder Telegramm eintrifft, der Status fälschlicherweise wieder auf 		"Bereit" gesetzt wurde.
+	- zwei weitere Sirenen Ausgänge hinzugefügt um vom Internen und Externen Alarm unterscheiden zu können. 
+	Sirene Extern: Wird nur aktiv wenn ein Alarm anliegt im Modus Extern Scharf
+	Sirene Intern: Wird nur aktiv wenn ein Alarm anliegt im Modus Intern Scharf
+	Sirene: Wird aktiv wenn ein Alarm anliegt im Modus Extern/Intern Scharf
+	
+	Version 1.3.2:
+	- Fehler behoben das die Status Ausgänge permanent senden und den Bus mit Telegrammen fluten.
+	
 	Version 1.2:
 	- Ausschalt Timer für die Sirene hinzugefügt. Wenn die Zeit verstrichen ist schaltet die Sirene aus
  	- Jede neue Alarmauslösung triggert die Alarmausgänge erneut(Sirene/Blitzleuchte)
