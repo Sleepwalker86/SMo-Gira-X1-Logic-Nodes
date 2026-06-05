@@ -443,6 +443,16 @@ Dieser Wert gibt an wie lange zum umschalten des Ventils in den Heiz- oder Zirku
 Verwendetes Icon:
 Schwimmbad Icons erstellt von xnimrodx - Flaticon
 
+###Changelog###
+
+V1.1.0
+- Heizbetrieb: Prüfung ob Rücklauf wärmer als Vorlauf erfolgt nun permanent bei jeder Änderung
+  der Rücklauftemperatur anstatt in festen Zeitintervallen
+- Prüfzeit-Timer startet erst wenn Rücklauf die erforderliche Temperaturdifferenz unterschreitet
+- Prüfzeit-Timer wird abgebrochen wenn Rücklauf die Temperaturdifferenz wieder überschreitet
+- Nach Deaktivierung des Heizbetriebs wird mit Pufferzeit auf HeizbetriebEinschalten umgeschaltet
+  (zuvor: Zirkulieren als Zwischenschritt)
+
 # Logikbaustein Divera Status Rückmeldung
 
 Beschreibung
