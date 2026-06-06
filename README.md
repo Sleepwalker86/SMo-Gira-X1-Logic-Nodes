@@ -377,9 +377,9 @@ Version: 1.0.6
 
 Der Baustein ist für die Steuerung einer Umwelzpumpe und einem Umschaltventil für zb. Sonnenkollektoren gedacht, die über einen Bypass angeschlossen sind.
 Der Baustein startet immer mit dem Start der Pumpe bis die Prüfzeit abgelaufen ist und schaltet anschließend um auf Heizen Ventil = 1.
-Nach Ablauf der Prüfzeit wird geprüft ob die Temperatur am Eingang „Rücklauftemperatur“  größer oder kleiner ist als der Eingang  „Vorlauftemperatur“.
-Rücklauf größer als Vorlauf -> weiter Heizen und nach Prüfzeit erneut Temperaturen vergleichen
-Rücklauf kleiner als Vorlauf -> Ventil = 0, umschalten auf Zirkulieren und nach Ablauf der Pufferzeit erneut auf heizen umschalten Ventil = 1.
+Es wird permanent geprüft ob die Temperatur am Eingang „Rücklauftemperatur“  größer oder kleiner ist als der Eingang  „Vorlauftemperatur“.
+Rücklauf größer als Vorlauf -> weiter Heizen
+Rücklauf kleiner als Vorlauf -> Ventil = 0, Timer starten mit der Prüfzeit, bleibt der Rücklauf kleiner als der Vorlauf wird umgeschaltet  auf Zirkulieren und nach Ablauf der Pufferzeit erneut auf heizen umschalten Ventil = 1.
 Liegt am Eingang „Filtern“ eine „1“ an, wird nur Zirkuliert und der Ausgang „Ventil“ schaltet nicht ein.
 Liegt am Eingang „Wasserdruck Sensor“ eine „0“ an, startet der Baustein nicht bzw. es wird der Ausgang „Pumpe“ und „Ventil“ auf „0“ gesetzt.
 
@@ -402,7 +402,7 @@ Folgende Parameter stehen zur Verfügung:
 
 - Pumpe (Anschluss Pumpe, Bool)
 - Ventil (Anschluss Ventil, Bool)
-- Debug (Ausgabe aktueller Vorgang + Zeitstempel, String)
+- Debug (Ausgabe aktueller Vorgang, String)
 - Freigabe 
 
 - Der Eingang „Freigabe“ dient zum aktivieren des Bausteins.
@@ -434,7 +434,7 @@ Hier wird der Wert angegeben um wieviel Grad das Wasser wärmer sein soll das vo
 Dieser Wert gibt an wie lange gewartet werden soll in Minuten bis vom Zirkulieren wieder ins heizen umgeschaltet werden soll um erneut zu prüfen ob jetzt Sonne da ist und das Wasser wärmer vom Rücklauf zurück kommt als der Vorlauf. (Default = 60 Minuten)
 
 - Prüfzeit
-Dieser Wert gibt an wie lange gewartet werden soll, wenn geheizt wird, bis Vor und Rücklauf gegeneinander geprüft werden.
+Dieser Wert gibt an wie lange der Rücklauf kleiner als der Vorlauf sein darf bevor auf zirkulieren umgeschaltet wird.
 (Default = 10 Minuten)
 
 - Wartezeit Ventilumschaltung / Sek.
